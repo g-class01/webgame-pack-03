@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+(function() {
+    function dummyBreak(fn) {
+        if (typeof fn === 'function') fn();
+        return Promise.resolve(true);
+    }
+    window.commercialBreak = window.commercialBreak || dummyBreak;
+    window.rewardedBreak = window.rewardedBreak || dummyBreak;
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.commercialBreak = window.parent.commercialBreak || dummyBreak;
+            window.parent.rewardedBreak = window.parent.rewardedBreak || dummyBreak;
+        }
+        if (window.top && window.top !== window) {
+            window.top.commercialBreak = window.top.commercialBreak || dummyBreak;
+            window.top.rewardedBreak = window.top.rewardedBreak || dummyBreak;
+        }
+    } catch(e) {}
+})();
+</script>
+  <script>window.open = function () {}; window.NOSW = true;</script>
+<script src="poki-sdk.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>House of Hazards - Poki</title>
+	<script>
+	window.config = {
+		loader: 'unity-2020',
+		debug: false,
+		maxRatio: 24 / 9,
+		minRatio: 9 / 24,
+
+		title: 'House of Hazards',
+		thumbnail: 'https:\/\/img.poki.com\/0609b0ba2889859b21cf47ca205818fe.png',
+		numScreenshots:  4 ,
+
+		unityVersion: '2022.3.14f1',
+		unityWebglBuildUrl: '',
+
+		fileSize:  31 ,
+		cachedDecompressedFileSizes: {
+			'10556bcfc56d7d58773d58fa27dbe47d.js':  361207 ,
+			'9d93c9885dd8fad56a89211eb3760978.wasm':  21675166 ,
+			'Poki_HOH5.loader.js':  20672 ,
+			'ac705d14af647e930dd81787a81d246e.data':  9595462 ,
+		},
+		"metadata": {"poki_template_version":1,"background_color":"#5FDEE7","code_filename":"9d93c9885dd8fad56a89211eb3760978.wasm","company_name":"New Eich Games","data_filename":"ac705d14af647e930dd81787a81d246e.data","development_player":"false","framework_filename":"10556bcfc56d7d58773d58fa27dbe47d.js","height":"600","loader_filename":"Poki_HOH5.loader.js","product_name":"House of Hazards","product_version":"0.1","splash_screen_style":"Dark","unity_version":"2022.3.14f1","use_data_caching":"true","use_threads":"false","use_wasm":"true","use_webgl_1_0":"false","use_webgl_2_0":"true","width":"960"}
+	};
+	</script>
+<!-- will be copied to the resulting head //-->
+</head>
+<body>
+	
+<!-- will be copied to the resulting body //-->
+<!-- will also be copied to the resulting body //-->
+<script src="unity-2020.js"></script>
+</body>
+</html>

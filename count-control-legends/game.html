@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+(function() {
+    function dummyBreak(fn) {
+        if (typeof fn === 'function') fn();
+        return Promise.resolve(true);
+    }
+    window.commercialBreak = window.commercialBreak || dummyBreak;
+    window.rewardedBreak = window.rewardedBreak || dummyBreak;
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.commercialBreak = window.parent.commercialBreak || dummyBreak;
+            window.parent.rewardedBreak = window.parent.rewardedBreak || dummyBreak;
+        }
+        if (window.top && window.top !== window) {
+            window.top.commercialBreak = window.top.commercialBreak || dummyBreak;
+            window.top.rewardedBreak = window.top.rewardedBreak || dummyBreak;
+        }
+    } catch(e) {}
+})();
+</script>
+  <script>window.open = function () {}; window.NOSW = true;</script>
+<script src="poki-sdk.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Count Control Legends - Poki</title>
+	<script>
+	window.config = {
+		loader: 'unity-2020',
+		debug: false,
+		maxRatio: 24 / 9,
+		minRatio: 9 / 24,
+
+		title: 'Count Control Legends',
+		thumbnail: 'https:\/\/img.poki-cdn.com\/e612cf6c7083881ffae58f633bcbc304.png',
+		numScreenshots:  4 ,
+
+		unityVersion: '2021.3.45f2',
+		unityWebglBuildUrl: '',
+
+		fileSize:  7 ,
+		cachedDecompressedFileSizes: {
+			'141962960e51c49a113a3322dac2c803.wasm.unityweb':  4529086 ,
+			'2a8ed63556477abc448ccb94fcbfeb9d.framework.js.unityweb':  70472 ,
+			'c7cea366ea8eaab59722a8d24073643f.loader.js':  64980 ,
+			'f5cc09ca375151924cba929561f75d53.data.unityweb':  2677528 ,
+		},
+		"metadata": {"poki_template_version":1,"background_color":"#231F20","code_filename":"141962960e51c49a113a3322dac2c803.wasm.unityweb","company_name":"Jungle Tavern","data_filename":"f5cc09ca375151924cba929561f75d53.data.unityweb","decompression_fallback":"Brotli","development_player":"false","framework_filename":"2a8ed63556477abc448ccb94fcbfeb9d.framework.js.unityweb","height":"600","loader_filename":"c7cea366ea8eaab59722a8d24073643f.loader.js","product_name":"Stickman Clash: Run and Multiply","product_version":"1.0.0","splash_screen_style":"Dark","unity_version":"2021.3.45f2","use_data_caching":"true","use_threads":"false","use_wasm":"true","use_webgl_1_0":"true","use_webgl_2_0":"true","width":"960"}
+	};
+	</script>
+<!-- will be copied to the resulting head //-->
+</head>
+<body>
+	
+<!-- will be copied to the resulting body //-->
+<!-- will also be copied to the resulting body //-->
+<script src="unity-2020.js"></script>
+</body>
+</html>

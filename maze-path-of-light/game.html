@@ -1,0 +1,61 @@
+<!doctype html><html lang="en"><head>
+<script>
+(function() {
+    function dummyBreak(fn) {
+        if (typeof fn === 'function') fn();
+        return Promise.resolve(true);
+    }
+    window.commercialBreak = window.commercialBreak || dummyBreak;
+    window.rewardedBreak = window.rewardedBreak || dummyBreak;
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.commercialBreak = window.parent.commercialBreak || dummyBreak;
+            window.parent.rewardedBreak = window.parent.rewardedBreak || dummyBreak;
+        }
+        if (window.top && window.top !== window) {
+            window.top.commercialBreak = window.top.commercialBreak || dummyBreak;
+            window.top.rewardedBreak = window.top.rewardedBreak || dummyBreak;
+        }
+    } catch(e) {}
+})();
+</script>
+  <script>window.open = function () {}; window.NOSW = true;</script>
+<script src="poki-sdk.js"></script><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover"><meta http-equiv="X-UA-Compatible" content="ie=edge"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="theme-color" content="#000000"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="application-name" content="Maze: Path of Light"/><meta name="apple-mobile-web-app-title" content="Maze: Path of Light"/><title>Maze: Path of Light</title><link id="favicon" rel="shortcut icon" href="favicon.png"/><script>var link = document.createElement('link');
+  link.rel = 'apple-touch-icon-precomposed';
+  link.href = document.getElementById('favicon').href;
+  document.head.appendChild(link);</script><style>html,
+      body {
+        height: 100%;
+        margin: 0;
+        background-color: #000000;
+      }
+      * {
+        overflow: hidden;
+      }
+      canvas {
+        position: fixed;
+        top: 0;
+      }
+
+      #preloader {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+      }</style><noscript>Please enable javascript to continue using this application.</noscript></head><body><div id="preloader" style="background-image: url(00_Splash_Screen_2048x2048.png)"></div><script>//document.getElementById('preloader').style.backgroundImage = 'url(' + document.getElementById('favicon').href + ')';</script><style>/*
+      @keyframes pulsating {
+          from {
+            opacity: 1;
+          }
+          to {
+            opacity: 0.33;
+          }
+      }
+      #preloader {
+        animation: pulsating 1s alternate infinite;
+      }
+      */</style><style>@font-face {
+				font-family: "GlacialIndifference";
+				src: url("fonts/GlacialIndifference-Regular.otf") format("opentype");
+      }</style><div style="position: absolute; z-index: 99; font-family: 'GlacialIndifference';">&nbsp;</div><script>setTimeout(function () {   window.scrollTo(0, 1); }, 1000);</script><script defer="defer" src="vendors.9ae4ba590be6185a517e.bundle.js"></script><script defer="defer" src="main.0625838b2d0558f99632.bundle.js"></script></body></html>
